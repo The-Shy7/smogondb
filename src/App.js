@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 import './App.css';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import { LinearProgress } from '@material-ui/core';
+import { Search } from '@material-ui/icons';
 
 function App() {
   const [mon, setMon] = useState([])
+  const [text, setText] = useState('')
 
   async function getMons() {
     let url = 'https://pokeapi.co/api/v2/pokemon/'
