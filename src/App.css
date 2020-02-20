@@ -11,6 +11,22 @@
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
 
+.App-header {  
+  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  padding-top:0.25rem;
+}
+
+.input-wrap {
+  width:98%;
+  display: flex;
+}
+
 .poke-list {
   display: flex;
   flex-wrap: wrap;
