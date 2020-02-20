@@ -1,18 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
+  const [mon, setMon] = useState([])
+
   async function getMons() {
-    let url = 'https://api.giphy.com/v1/gifs/search?'
-    url += 'api_key='+key
-    url += '&q='+text
+    let url = 'https://pokeapi.co/api/v2/pokemon/'
+    const numMon = 721
+    url += '' + numMon + '/'
     const r = await fetch(url)
     const body = await r.json()
+    setMon(body.sprites.front_default)
   }
 
   return (
     <div className="App">
-      <PokeList/>
+      <PokeList
+        onKeyPress={e=> {
+          if(e.key==='Enter') getMons()
+        }}
+      />
     </div>
   );
 }
