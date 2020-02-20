@@ -6,30 +6,52 @@ import { LinearProgress } from '@material-ui/core';
 import { Search } from '@material-ui/icons';
 
 function App() {
-  const [mon, setMon] = useState([])
+  const [mons, setMon] = useState([])
   const [text, setText] = useState('')
+  const [loading, setLoading] = useState(false)
 
   async function getMons() {
+    setLoading(true)
+    setMon([])
     let url = 'https://pokeapi.co/api/v2/pokemon/'
     const numMon = 721
     url += '' + numMon + '/'
     const r = await fetch(url)
     const body = await r.json()
-    setMon(body.sprites.front_default)
+    setMon(body)
+    setText('')
+    setLoading(false)
   }
 
   return (
     <div className="App">
-      <PokeList
-        onKeyPress={e=> {
-          if(e.key==='Enter') getMons()
-        }}
-      />
+      <header className="App-header">
+        <div className="input-wrap">
+          <TextField fullWidth variant="outlined"
+            label="Search Pokemon!"
+            value={text}
+            onChange={e=> setText(e.target.value)}
+            onKeyPress={e=> {
+              if(e.key==='Enter') getMons()
+            }}
+          />
+          <Button variant="contained" color="primary"
+            onClick={getMons}>
+            <Search />
+            Search
+          </Button>
+        </div>
+      </header>
+      {loading && <LinearProgress />}
+      
+      <div className="memes">
+        {mons.map((mon,i)=> <Pokemon key={i} {...mon} />)}
+      </div>
     </div>
   );
 }
 
-function PokeList() {
+function Pokemon() {
   return (<div className="poke-list">
 
   </div>
