@@ -26,8 +26,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div className="logo-wrap">
+          <img className="logo"
+            alt="smogon logo"
+            src="https://www.smogon.com/forums/media/twitter.png"
+          />
+        Pokemon Smogon Database
+        </div>
         <div className="input-wrap">
-          <TextField fullWidth variant="outlined"
+          <TextField variant="outlined"
             label="Search Pokemon!"
             value={text}
             onChange={e=> setText(e.target.value)}
