@@ -44,18 +44,19 @@ function App() {
       </header>
       {loading && <LinearProgress />}
       
-      <div className="memes">
+      {/* <div className="memes">
         {mons.map((mon,i)=> <Pokemon key={i} {...mon} />)}
-      </div>
+      </div> */}
     </div>
   );
 }
 
-function Pokemon() {
-  return (<div className="poke-list">
-
-  </div>
-  );
-}
+// function Pokemon({name, sprites}) {
+//   const url = sprites.front_default
+  
+//   return (<div className="poke-cell">
+//     {<img alt={name} src={url} />}
+//   </div>)
+// }
 
 export default App;
