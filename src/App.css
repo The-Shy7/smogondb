@@ -1,14 +1,10 @@
 .App {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  width: 650px;
-  height: 400px;
-  padding-left: 10px;
-  margin: 50px auto;
-  background-color: #FE0065;
-  border-radius: 10px;
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  background-color: black;
+}
+
+body {
+  background-image: url("https://play.pokemonshowdown.com/fx/client-bg-horizon.jpg");
 }
 
 .App-header {  
@@ -18,13 +14,23 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: white;
   padding-top:0.25rem;
 }
 
 .input-wrap {
   width:98%;
   display: flex;
+}
+
+.logo {
+  height:2.5rem;
+  margin-right:5px;
+}
+
+.logo-wrap{
+  display: flex;
+  align-items: center;
 }
 
 .poke-list {
@@ -61,6 +67,7 @@ html { /* mobile */
       font-size:19px;
   }
 }
+
 @media only screen and (min-width: 768px){
   html { /* desktop */
       font-size:22px;
