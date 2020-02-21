@@ -1,69 +1,62 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import './App.css';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import { LinearProgress } from '@material-ui/core';
-import { Search } from '@material-ui/icons';
+import {Input, Button} from 'antd'
+
+const ctxt = React.createContext()
 
 function App() {
-  const [mons, setMon] = useState([])
-  const [text, setText] = useState('')
-  const [loading, setLoading] = useState(false)
-
-  async function getMons() {
-    setLoading(true)
-    setMon([])
-    let url = 'https://pokeapi.co/api/v2/pokemon/'
-    const numMon = 721
-    url += '' + numMon + '/'
-    const r = await fetch(url)
-    const body = await r.json()
-    setMon(body)
-    setText('')
-    setLoading(false)
-  }
-
-  return (
+  const [state, setState] = useState({
+    searchTerm:''
+  })
+  return <ctxt.Provider value={{
+    ...state,
+    set: v=> setState({...state, ...v})
+  }}>
     <div className="App">
-      <header className="App-header">
-        <div className="logo-wrap">
-          <img className="logo"
-            alt="smogon logo"
-            src="https://www.smogon.com/forums/media/twitter.png"
-          />
-        Pokemon Smogon Database
-        </div>
-        <div className="input-wrap">
-          <TextField variant="outlined"
-            label="Search Pokemon!"
-            value={text}
-            onChange={e=> setText(e.target.value)}
-            onKeyPress={e=> {
-              if(e.key==='Enter') getMons()
-            }}
-          />
-          <Button variant="contained" color="primary"
-            onClick={getMons}>
-            <Search />
-            Search
-          </Button>
-        </div>
-      </header>
-      {loading && <LinearProgress />}
-      
-      {/* <div className="memes">
-        {mons.map((mon,i)=> <Pokemon key={i} {...mon} />)}
-      </div> */}
+      <Header />
     </div>
-  );
+  </ctxt.Provider>
 }
 
-// function Pokemon({name, sprites}) {
-//   const url = sprites.front_default
-  
-//   return (<div className="poke-cell">
-//     {<img alt={name} src={url} />}
-//   </div>)
-// }
+function Header() {
+  const ctx = useContext(ctxt)
+  const {loading, searchTerm} = ctx
+  return <header className="App-header">
+    <div className="logo-wrap">
+      <img className="logo"
+        alt="smogon logo"
+        src="https://www.smogon.com/forums/media/twitter.png"
+      />
+      Pokemon Smogon Dex
+    </div>
+    <Input 
+      value={searchTerm} disabled={loading}
+      onChange={e=> ctx.set({searchTerm: e.target.value})}
+      style={{height:'1.1rem',fontSize:'0.8rem',marginTop:65,marginLeft:'27.5rem'}} 
+      onKeyPress={e=>{
+        if(e.key==='Enter' && searchTerm) search(ctx)
+      }}
+    />
+    <Button style={{marginLeft:'0.3rem',height:'1.4rem',marginTop:65}}
+      onClick={()=> search(ctx)} type="primary"
+      disabled={!searchTerm} loading={loading}>
+      Search
+    </Button>
+  </header>
+}
+
+async function search({searchTerm, set}) {
+  try {
+    const term = searchTerm
+    set({error:'', loading:true})
+    const url = `https://pokeapi.co/api/v2/pokemon/${term}/`
+    const r = await fetch(url)
+    const mon = await r.json()
+    console.log(mon)
+    set({mon, loading:false, searchTerm:''})
+  } catch(e) {
+    set({error: e.message})
+  }
+}
 
 export default App;
