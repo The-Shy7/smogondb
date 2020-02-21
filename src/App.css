@@ -7,15 +7,15 @@ body {
   background-image: url("https://play.pokemonshowdown.com/fx/client-bg-horizon.jpg");
 }
 
-.App-header {  
-  min-height: 3rem;
+.App-header {
+  background-color: #282c34;
+  min-height: 4rem;
+  padding:0 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-top:0.25rem;
 }
 
 .input-wrap {
@@ -24,8 +24,9 @@ body {
 }
 
 .logo {
-  height:2.5rem;
-  margin-right:5px;
+  height:4.5rem;
+  width:4.5rem;
+  margin-right:1px;
 }
 
 .logo-wrap{
