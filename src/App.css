@@ -59,6 +59,26 @@ body {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
 }
 
+.mon-name{
+  display:none;
+  position: absolute;
+  width:calc(100% - 10px);
+  bottom:4px;
+  left:0;
+  right:0;
+  background:rgba(255,255,255,0.35);
+  font-weight: bold;
+  font-size:0.7rem;
+  padding:2px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poke-cell:hover .mon-name{
+  display:block;
+}
+
 html { /* mobile */
   font-size:16px;
 }
