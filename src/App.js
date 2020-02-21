@@ -54,9 +54,21 @@ async function search({searchTerm, set}) {
     const mon = await r.json()
     console.log(mon)
     set({mon, loading:false, searchTerm:''})
+    return <div className="poke-list">
+      <Mon/>
+    </div>
   } catch(e) {
     set({error: e.message})
   }
+}
+
+function Mon({sprites, name}) {
+  const url = sprites.front_default
+  
+  return (<div className="poke-cell" onClick={()=>window.open(url, '_blank')}>
+    <div className="mon-name">{name}</div>
+    {<img alt={name} src={url} />}
+  </div>)
 }
 
 export default App;
