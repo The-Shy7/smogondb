@@ -18,7 +18,6 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div>
-        <NavBar />
 
         <SearchBar filter={this.handleFilters} />
         <Switch>
@@ -28,7 +27,6 @@ function App() {
             render={() => <PokeCalls filterList={this.state.typeFilters} />}
           />
           <Route exact path="/detail/:name" component={Detail} />
-          <Route exact path="/generations/:num" component={Generations} />
           <Route component={ErrorMessage} />
         </Switch>
       </div>
