@@ -1,0 +1,385 @@
+.loadingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .pokeDetail {
+    background: hsl(209, 18%, 30%);
+    color: hsl(214, 33%, 97%);
+    border-radius: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 15px 35px hsla(0, 0%, 0%, 0.2);
+  }
+  .pokeDetailName {
+    text-transform: capitalize;
+  }
+  .pokemonName {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .weightContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .types {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .typeContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+  .typeContainer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 72px;
+    margin-left: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  .shiny {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .stats {
+    display: grid;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    justify-items: center;
+    grid-gap: 20px;
+  }
+  .pokeStats {
+    padding: 5px;
+  }
+  .statName {
+    text-transform: capitalize;
+  }
+  .topBoxWrapper {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 30px;
+    width: 100%;
+  }
+  .pokePicture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 34px;
+  }
+  .pokeNameContainer {
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+  .abilityContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .pokeAbilities {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .s-Ability {
+    text-transform: capitalize;
+  }
+  .callsContainer {
+    font-size: 13px;
+    width: 138px;
+    padding: 10px 0;
+  }
+  .ability {
+    padding: 10px;
+  }
+  .grass {
+    background-color: #2da01b;
+  }
+  .poison {
+    background-color: #8a3ab2;
+  }
+  .fire {
+    background-color: #ed5f0e;
+  }
+  .water {
+    background-color: #3549e6;
+  }
+  .fighting {
+    background-color: #bd1c44;
+  }
+  .flying {
+    background-color: #6fb5f2;
+  }
+  .dragon {
+    background-color: #8111d6;
+  }
+  .normal {
+    background-color: #a8a878;
+  }
+  .fairy {
+    background-color: #f4b5e0;
+  }
+  .electric {
+    background-color: #ebe54d;
+  }
+  .ground {
+    background-color: #bfb547;
+  }
+  .fairy {
+    background-color: #ff309b;
+  }
+  .electric {
+    background-color: #ffe521;
+  }
+  .ice {
+    background-color: #38ffe1;
+  }
+  .dark {
+    background-color: #3a321c;
+  }
+  .steel {
+    background-color: #8f959b;
+  }
+  .bug {
+    background-color: #93ba6d;
+  }
+  .psychic {
+    background-color: #ff0ab1;
+  }
+  .rock {
+    background-color: #a59465;
+  }
+  .ghost {
+    background-color: #622882;
+  }
+  .moveButton {
+    border-radius: 12px;
+    border: none;
+    text-decoration: none;
+  }
+  .statContainer {
+    width: 255px;
+    background-color: #b3b3b3;
+    margin: 16px 0;
+  }
+  .statBar {
+    background-color: #1098f7;
+    color: #000;
+  }
+  .s-Type {
+    color: #040405;
+  }
+  .p-Types {
+    width: 60px;
+  }
+  
+  @media only screen and (min-width: 900px) {
+    .pokeDetail {
+      margin: 20px auto;
+      display: grid;
+      grid-gap: 20px;
+      max-width: 900px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .topBoxWrapper {
+      grid-gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-rows: repeat(2, 1fr);
+      grid-column: 1 / -1;
+    }
+    .pokePicture {
+      grid-column: 1;
+      grid-row: 1/ -1;
+      margin: 0;
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+    }
+    .pokePicture img {
+      height: 142px;
+    }
+    .p-Shiny {
+      margin-bottom: 11px;
+    }
+    .stats {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+    .pokeContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 24px;
+      grid-gap: 16px;
+    }
+    .pokemonName {
+      display: grid;
+      justify-items: center;
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      grid-template-columns: repeat(2, auto);
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .weightContainer {
+      display: grid;
+      justify-items: center;
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row: 2;
+      grid-column: 3;
+    }
+    .pokeAbilities {
+      display: grid;
+      height: 100%;
+      padding-top: 30px;
+      margin: 0;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+    }
+    .abilityContainer {
+      grid-column: 2 / 3;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      justify-items: center;
+      grid-row: 2 / 3;
+      height: 100%;
+      margin: 0;
+    }
+    .ability {
+      padding: 0;
+    }
+    .shiny {
+      display: grid;
+      justify-items: center;
+      -ms-flex-align: center;
+      -webkit-box-align: center;
+      align-items: center;
+      grid-template-rows: repeat(2, 1fr);
+      grid-row: 1 / span 2;
+      grid-column: 2;
+    }
+    .p-Shiny {
+      margin: 0;
+    }
+    .shinySprite img {
+      height: 142px;
+    }
+    .types {
+      display: grid;
+      justify-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      margin-right: 16px;
+    }
+  }
