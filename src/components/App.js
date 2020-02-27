@@ -1,9 +1,6 @@
 import React, {useState} from "react";
-import PokeCalls from "./pokecalls/PokeCalls";
 import SearchBar from "./searchBar/SearchBar";
 import Detail from "./detail/Detail";
-import NavBar from "./navbar/NavBar";
-import Generations from "./generations/Generations";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ErrorMessage from "./errorMessage/ErrorMessage";
 
