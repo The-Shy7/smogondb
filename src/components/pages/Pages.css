@@ -1,0 +1,17 @@
+.pokeButtons {
+  width: 150px;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.paginationBtn {
+  margin-left: 15px;
+  border-radius: 10px;
+  background-color: #8b0000;
+  border: none;
+  color: #dadad9;
+  height: 27px;
+  width: 50px;
+  cursor: pointer;
+}
