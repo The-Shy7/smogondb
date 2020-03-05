@@ -10,6 +10,7 @@ import ErrorMessage from "./errorMessage/ErrorMessage";
 function App() {
   const [typeFilters, setTypeFilters] = useState([])
 
+  // Fix this handleFilter
   handleFilters = ({typeFilters}) => {
     if (!typeFilters) {
       setTypeFilters([])
