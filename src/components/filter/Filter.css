@@ -1,0 +1,66 @@
+.typeList {
+  position: absolute;
+  top: 110px;
+  z-index: 1;
+  background-color: #8b0000;
+  border-radius: 5px;
+  padding: 7px;
+  padding-bottom: 7px;
+  padding: 15px 7px;
+  width: 200px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  margin-left: 31px;
+}
+.typesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-gap: 4px;
+}
+.typeNames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #dadad9;
+}
+.filter-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.filter-btn {
+  border: none;
+  background: hsl(211, 33%, 44%);
+  color: hsl(214, 33%, 97%);
+  width: 70px;
+  border-radius: 6px;
+  height: 26px;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background: hsl(214, 33%, 97%);
+  color: hsl(211, 33%, 44%);
+}
+.typeList:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  left: 88%;
+  border: 10px solid transparent;
+  border-bottom: 10px solid #8b0000;
+  bottom: 99%;
+}
+@media only screen and (min-width: 700px) {
+  .typeList {
+    top: 125px;
+  }
+}
