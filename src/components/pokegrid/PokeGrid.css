@@ -1,0 +1,57 @@
+.pokeName {
+  padding-bottom: 20px;
+}
+
+.pokeGridContainer {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 40px 0px;
+  padding: 0;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.listItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.pokeGridItemContainer {
+  background-color: #2b4859;
+  border-radius: 24%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 200px;
+  color: #dadad9;
+  -webkit-box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  text-transform: capitalize;
+}
+
+.pokeGridItemContainer:hover,
+.pokeGridItemContainer:focus-within {
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+}
