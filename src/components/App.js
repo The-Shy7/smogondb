@@ -1,4 +1,4 @@
-import React, { Component,useState } from "react";
+import React, { Component } from "react";
 import PokeCalls from "./pokecalls/PokeCalls";
 import SearchBar from "./searchBar/SearchBar";
 import Detail from "./detail/Detail";
@@ -7,37 +7,42 @@ import Generations from "./generations/Generations";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ErrorMessage from "./errorMessage/ErrorMessage";
 
-function App() {
-  const [typeFilters, setTypeFilters] = useState([])
-
-  // Fix this handleFilter
-  handleFilters = ({typeFilters}) => {
-    if (!typeFilters) {
-      setTypeFilters([])
-    } 
-
-    setTypeFilters(typeFilters)
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      typeFilters: []
+    };
   }
 
-  return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div>
-        <NavBar />
+  handleFilters = typeFilters => {
+    if (!typeFilters) {
+      this.setState({ typeFilters: [] });
+    }
+    this.setState({ typeFilters: typeFilters });
+  };
 
-        <SearchBar filter={this.handleFilters} />
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => <PokeCalls filterList={this.state.typeFilters} />}
-          />
-          <Route exact path="/detail/:name" component={Detail} />
-          <Route exact path="/generations/:num" component={Generations} />
-          <Route component={ErrorMessage} />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  );
+  render() {
+    return (
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <div>
+          <NavBar />
+
+          <SearchBar filter={this.handleFilters} />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => <PokeCalls filterList={this.state.typeFilters} />}
+            />
+            <Route exact path="/detail/:name" component={Detail} />
+            <Route exact path="/generations/:num" component={Generations} />
+            <Route component={ErrorMessage} />
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
