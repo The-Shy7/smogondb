@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import DetailsCalls from "../detail/DetailsCalls";
+import DetailCalls from "../detail/DetailCalls";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import KeyboardArrowDown from "@material-ui/icons/KeyboardArrowDown";
 
 const AbilityDetails = ability => {
   const [showAbility, setShowAbility] = useState(false);
+
   return (
     <div className="ability">
       <span key={ability.name} className="s-Ability">
         {" "}
         {ability.name}{" "}
       </span>
+
       <button
         className="moveButton"
         onClick={() => setShowAbility(!showAbility)}
@@ -21,8 +23,9 @@ const AbilityDetails = ability => {
           <KeyboardArrowRight style={{ fontSize: 17 }} />
         )}
       </button>
+      
       <div className="callsContainer">
-        {showAbility ? <DetailsCalls abilityUrl={ability.url} /> : ""}
+        {showAbility ? <DetailCalls abilityUrl={ability.url} /> : ""}
       </div>
     </div>
   )
