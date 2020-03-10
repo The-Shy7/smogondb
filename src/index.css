@@ -2,10 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: black;
-  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/094dd56f-e7ea-4b0e-b54f-fdc2c99effd9/d55wyw0-2667ea73-4843-488c-b110-5ee6cbd00d3b.jpg/v1/fill/w_1024,h_683,q_75,strp/pokemon__horizon_by_vtas_d55wyw0-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjgzIiwicGF0aCI6IlwvZlwvMDk0ZGQ1NmYtZTdlYS00YjBlLWI1NGYtZmRjMmM5OWVmZmQ5XC9kNTV3eXcwLTI2NjdlYTczLTQ4NDMtNDg4Yy1iMTEwLTVlZTZjYmQwMGQzYi5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Inue1YPJ5jDwUFV67QcvqU_AZ68bf7TEfyHR3Nt404M'); 
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: hsl(214, 15%, 91%);
 }
 a {
   text-decoration: none;
