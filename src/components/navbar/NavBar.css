@@ -1,7 +1,7 @@
 .navBar {
   position: static;
   top: 0;
-  background: #8b0000;
+  background: black;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -108,7 +108,7 @@
 }
 
 .generationsListContainer {
-  background: hsl(210, 18%, 30%);
+  background: black;
   visibility: hidden;
   opacity: 0;
   height: 0;
@@ -169,5 +169,6 @@
     max-height: 60px;
     visibility: visible;
     opacity: 1;
+    background-color: black;
   }
 }
