@@ -2,7 +2,7 @@
   position: absolute;
   top: 110px;
   z-index: 1;
-  background-color: #8b0000;
+  background-color: black;
   border-radius: 5px;
   padding: 7px;
   padding-bottom: 7px;
@@ -56,7 +56,7 @@
   border: 10px solid transparent;
   left: 88%;
   border: 10px solid transparent;
-  border-bottom: 10px solid #8b0000;
+  border-bottom: 10px solid black;
   bottom: 99%;
 }
 @media only screen and (min-width: 700px) {
