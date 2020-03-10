@@ -27,7 +27,7 @@ class App extends Component {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
           <NavBar />
-
+          <img class='smogonlogo' src='https://www.smogon.com/forums/media/twitter.png'/>
           <SearchBar filter={this.handleFilters} />
           <Switch>
             <Route
