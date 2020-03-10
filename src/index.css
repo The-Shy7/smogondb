@@ -33,3 +33,13 @@ h3 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.smogonlogo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  padding-left: 35px;
+  width: 250px;
+  height: 250px;
+}
