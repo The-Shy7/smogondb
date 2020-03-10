@@ -9,5 +9,6 @@
       -ms-flex-align: center;
           align-items: center;
   height: 68vh;
-  margin: 0 10px;
+  margin: auto;
+  position: relative;
 }
