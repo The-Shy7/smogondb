@@ -37,7 +37,7 @@ h3 {
 .smogonlogo {
   display: flex;
   justify-content: center;
-  position: relative;
+  position: static;
   margin: auto;
   padding-left: 35px;
   width: 250px;
