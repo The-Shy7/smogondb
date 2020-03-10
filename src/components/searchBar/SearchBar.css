@@ -17,25 +17,33 @@
   border-radius: 12px;
   border: none;
   text-decoration: none;
-  background-color: #8b0000;
+  background-color: black;
   cursor: pointer;
   color: #dadad9;
   font-size: 16px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .inputField {
   background: transparent;
   border: 0;
   outline: 0;
-  border-bottom: 2px solid #8b0000;
-  color: hsl(210, 24%, 16%);
+  border-bottom: 2px solid black;
+  color: black;
+  margin-left: 30px;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .filterButton {
   border-radius: 12px;
   border: none;
   text-decoration: none;
-  background-color: #8b0000;
+  background-color: black;
   cursor: pointer;
   color: #dadad9;
+  font-size: 16px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
