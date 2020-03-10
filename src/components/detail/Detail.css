@@ -6,7 +6,7 @@
     transform: translate(-50%, -50%);
   }
   .pokeDetail {
-    background: hsl(209, 18%, 30%);
+    background: black;
     color: hsl(214, 33%, 97%);
     border-radius: 10px;
     max-width: 350px;
