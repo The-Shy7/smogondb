@@ -1,5 +1,5 @@
 .navBar {
-  position: static;
+  position: fixed;
   top: 0;
   background: black;
   width: 100%;
