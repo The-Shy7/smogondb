@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Deployed site: https://smogondex.now.sh/
 
+All Pokemon data was acquired from this RESTful API: https://pokeapi.co/. 
+
 ## Available Scripts
 
 In the project directory, you can run:
