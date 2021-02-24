@@ -1,8 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Description
+
 Deployed site: https://smogondex.now.sh/
 
 All Pokemon data was acquired from this RESTful API: https://pokeapi.co/. 
+
+A database of Pokemon built using React that displays Pokemon where users can filter and view details of specific pokemon. 
 
 ## Available Scripts
 
